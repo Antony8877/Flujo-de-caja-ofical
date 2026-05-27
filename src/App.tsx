@@ -215,7 +215,7 @@ export default function App() {
       </div>
     );
   }
-  return <PantallaLaboratorio1 />;
+  //return <PantallaLaboratorio1 />;
 
   // ── RENDER: Auth screens (login / signup) ─────────────────────────────────
   return (

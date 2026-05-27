@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Anular Transacción - Agrovet Manantial</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#c3c8b9",
+                    "on-surface": "#1b1c19",
+                    "surface-container-high": "#e9e8e3",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#30312e",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#faf9f4",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#0a2002",
+                    "inverse-primary": "#acd28c",
+                    "surface-tint": "#47672d",
+                    "on-secondary-container": "#516c42",
+                    "surface": "#faf9f4",
+                    "secondary-container": "#cdecb8",
+                    "on-surface-variant": "#43483d",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f5f4ef",
+                    "tertiary": "#320328",
+                    "secondary-fixed-dim": "#b2cf9d",
+                    "primary-fixed": "#c8eea5",
+                    "on-primary-fixed": "#0c2000",
+                    "on-primary-container": "#7a9e5d",
+                    "surface-variant": "#e3e3de",
+                    "on-secondary-fixed-variant": "#344d27",
+                    "primary-fixed-dim": "#acd28c",
+                    "on-primary-fixed-variant": "#304f18",
+                    "surface-dim": "#dbdad5",
+                    "surface-container": "#efeee9",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e3e3de",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed": "#37072c",
+                    "tertiary-container": "#4b193e",
+                    "tertiary-fixed": "#ffd8ee",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#1b1c19",
+                    "tertiary-fixed-dim": "#f8b1de",
+                    "primary": "#091c00",
+                    "on-tertiary-container": "#c17faa",
+                    "on-tertiary-fixed-variant": "#6a345a",
+                    "secondary-fixed": "#cdecb8",
+                    "primary-container": "#163300",
+                    "background": "#faf9f4",
+                    "secondary": "#4c653d",
+                    "on-error": "#ffffff",
+                    "inverse-on-surface": "#f2f1ec",
+                    "outline": "#74796c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "2.0rem",
+                    "sm": "0.8rem",
+                    "lg": "2.4rem",
+                    "sidebar-width": "26.0rem",
+                    "xl": "3.2rem",
+                    "xs": "0.4rem",
+                    "md": "1.6rem"
+            },
+            "fontFamily": {
+                    "body-lg": ["Hanken Grotesk"],
+                    "label-md": ["Hanken Grotesk"],
+                    "label-sm": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "body-lg": ["1.6rem", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-md": ["1.2rem", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "label-sm": ["1.0rem", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-lg": ["2.4rem", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-md": ["2.0rem", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-lg": ["3.2rem", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["1.4rem", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #faf9f4;
+            font-family: 'Hanken Grotesk', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e3e3de;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="text-on-surface antialiased overflow-hidden">
+<div class="flex h-screen w-full">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-sidebar-width bg-surface border-r border-outline-variant flex flex-col py-md px-sm z-50">
+<div class="mb-xl px-sm">
+<h1 class="font-headline-md text-headline-md font-bold text-primary">Agrovet Manantial</h1>
+<p class="font-label-md text-label-md text-on-surface-variant">Gestión Financiera</p>
+</div>
+<nav class="flex-1 flex flex-col gap-xs overflow-y-auto custom-scrollbar">
+<!-- Navigation Items -->
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-md text-label-md">Inicio</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-primary-fixed-variant font-bold border-l-4 border-on-primary-fixed-variant bg-secondary-fixed active:scale-95 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="swap_horiz">swap_horiz</span>
+<span class="font-label-md text-label-md">Transacciones</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+<span class="font-label-md text-label-md">Cuentas</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="#">
+<span class="material-symbols-outlined" data-icon="category">category</span>
+<span class="font-label-md text-label-md">Conceptos</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-label-md text-label-md">Reportes</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-md text-label-md">Configuración</span>
+</a>
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors group" href="#">
+<span class="material-symbols-outlined" data-icon="block">block</span>
+<span class="font-label-md text-label-md">Transacciones Anuladas</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-outline-variant pt-md px-sm">
+<a class="flex items-center gap-sm px-md py-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="font-label-md text-label-md">Perfil</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-[26.0rem] flex-1 h-screen overflow-y-auto bg-background">
+<!-- TopAppBar -->
+<header class="flex items-center justify-between w-full px-xl py-lg sticky top-0 bg-background/80 backdrop-blur-md z-40 border-b border-outline-variant">
+<div class="flex items-center gap-md">
+<nav class="flex text-on-surface-variant font-label-md text-label-md gap-xs items-center">
+<span class="hover:text-primary cursor-pointer transition-colors">Inicio</span>
+<span class="material-symbols-outlined text-[1.4rem]">chevron_right</span>
+<span class="hover:text-primary cursor-pointer transition-colors">Transacciones</span>
+<span class="material-symbols-outlined text-[1.4rem]">chevron_right</span>
+<span class="text-primary font-bold">Anular</span>
+</nav>
+</div>
+<div class="flex items-center gap-lg">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" data-icon="notifications">notifications</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors" data-icon="help">help</button>
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center overflow-hidden border border-outline-variant">
+<img alt="Usuario Perfil" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4m29EseL_V6xyaM32Znk38yYUYB6HAy0ogSZ5jPz6escgVIF4_K41-rzP7yid7vozIQRKO8dQ3QGFknbAr6W7s4gyYh7NLWiNqJ-bpfkouZ-g6LOuzpooyuooZGAaxteQQQ6MQfD2Qq2dr9rhda2tG5BboPebkAXQ2djPVNip1WGTFTiDf_tbJfkA5YcFkF5wKgX6jf9b0qzm2ja2yUugwFLpjHmv4TIWOfYphCwBCHWM1aN5Dl7uTYJLCgRMQFN4dh30XbfFFAqm"/>
+</div>
+</div>
+</header>
+<div class="max-w-[100.0rem] mx-auto px-xl py-xl">
+<div class="mb-lg">
+<h2 class="font-display-lg text-display-lg text-primary">Anular Transacción</h2>
+</div>
+<!-- Central Form Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm">
+<!-- Card Header / Summary -->
+<div class="p-lg border-b border-outline-variant bg-surface-bright">
+<h3 class="font-headline-md text-headline-md text-primary mb-md">Detalles de la Transacción a Anular</h3>
+<div class="flex flex-wrap justify-between items-end">
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant">Concepto</p>
+<p class="font-body-lg text-body-lg font-semibold">Pago Proveedor</p>
+</div>
+<div class="text-right">
+<p class="font-label-md text-label-md text-on-surface-variant">Monto</p>
+<p class="font-headline-lg text-headline-lg text-primary">$500.00 USD</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2">
+<!-- Left Details Pane -->
+<div class="p-lg border-r border-outline-variant space-y-md">
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant">Fecha:</p>
+<p class="font-body-md text-body-md">25 Octubre 2023</p>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant">Cuenta:</p>
+<p class="font-body-md text-body-md">Principal (USD) ••••1234</p>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant">ID Original:</p>
+<p class="font-body-md text-body-md text-on-surface-variant">TRX-00123456</p>
+</div>
+</div>
+<!-- Right Form Pane -->
+<div class="p-lg flex flex-col h-full">
+<label class="font-headline-md text-headline-md text-primary mb-sm" for="motivo">Motivo de la anulación</label>
+<div class="relative flex-1 min-h-[16.0rem]">
+<textarea class="w-full h-full p-md bg-white border border-outline-variant rounded-lg font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary transition-all resize-none outline-none" id="motivo" maxlength="500" placeholder="Explique el motivo de la anulación..."></textarea>
+<div class="absolute bottom-3 right-3 font-label-sm text-label-sm text-on-surface-variant/60" id="char-count">0/500</div>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-sm">Por favor, proporcione una explicación clara.</p>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="p-lg bg-surface-container-low flex items-center justify-end gap-md">
+<button class="px-xl py-md border border-primary text-primary rounded-lg font-label-md text-label-md hover:bg-surface-container-high transition-colors active:scale-95">
+                            Cancelar
+                        </button>
+<button class="px-xl py-md bg-primary-container text-on-primary rounded-lg font-label-md text-label-md flex items-center gap-xs hover:bg-primary transition-colors shadow-md active:scale-95">
+                            Confirmar Anulación
+                            <span class="material-symbols-outlined text-[1.8rem]" data-icon="warning" style="font-variation-settings: 'FILL' 1;">warning</span>
+</button>
+</div>
+</div>
+<!-- Warning Alert -->
+<div class="mt-lg p-md bg-error-container/30 border border-error/20 rounded-lg flex gap-md items-start">
+<span class="material-symbols-outlined text-error" data-icon="info">info</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-error-container font-bold">Acción irreversible</h4>
+<p class="font-body-md text-body-md text-on-error-container/80">Una vez confirmada la anulación, esta transacción pasará al historial de transacciones anuladas y no podrá ser restaurada. Los fondos serán revertidos a la cuenta de origen automáticamente.</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+<script>
+        // Simple micro-interaction for character count
+        const textarea = document.getElementById('motivo');
+        const charCount = document.getElementById('char-count');
+
+        textarea.addEventListener('input', () => {
+            const count = textarea.value.length;
+            charCount.textContent = `${count}/500`;
+            
+            if (count > 450) {
+                charCount.classList.add('text-error');
+            } else {
+                charCount.classList.remove('text-error');
+            }
+        });
+
+        // Add some atmospheric ripple effect to primary button (conceptual)
+        const primaryBtn = document.querySelector('.bg-primary-container');
+        primaryBtn.addEventListener('click', function(e) {
+            if (textarea.value.trim() === "") {
+                textarea.classList.add('border-error', 'shake');
+                setTimeout(() => textarea.classList.remove('shake'), 400);
+                return;
+            }
+            // Mock submission
+            this.innerHTML = `<span class="material-symbols-outlined animate-spin" data-icon="progress_activity">progress_activity</span> Procesando...`;
+            this.disabled = true;
+            setTimeout(() => {
+                window.location.reload(); // Just a reset for the demo
+            }, 1500);
+        });
+    </script>
+<style>
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-4px); }
+            75% { transform: translateX(4px); }
+        }
+        .shake {
+            animation: shake 0.2s ease-in-out 0s 2;
+        }
+    </style>
+</body></html>

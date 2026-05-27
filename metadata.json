@@ -1,0 +1,6 @@
+{
+  "name": "Systems Engineering Portal",
+  "description": "A high-performance portal featuring a systems engineering theme, animated interactive signup, and responsive screens.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

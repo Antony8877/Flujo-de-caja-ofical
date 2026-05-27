@@ -2,7 +2,7 @@
  * @license
  * SPDX-License-Identifier: Apache-2.0
  */
-import { PantallaLaboratorio } from './sanbox/MiLaboratorio';
+
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import {
@@ -18,7 +18,7 @@ import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import RegistroScreen from './components/RegistroScreen';
 import AnulacionScreen from './components/AnulacionScreen';
-import { PantallaLaboratorio1 } from './sanbox/MiLaboratorio2';
+
 
 // ─── Seed data ───────────────────────────────────────────────────────────────
 const INITIAL_TRANSACTIONS: Transaction[] = [
@@ -215,7 +215,7 @@ export default function App() {
       </div>
     );
   }
-  //return <PantallaLaboratorio1 />;
+  
 
   // ── RENDER: Auth screens (login / signup) ─────────────────────────────────
   return (
